@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafting Malang Adventure - Vendor Terbaik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            // SAYA UBAH DI SINI:
+                            blue: '#059669',   /* SEKARANG JADI HIJAU (Emerald) - Warna Utama */
+                            dark: '#0F172A',   /* Tetap Gelap */
+                            orange: '#d97706', /* SEKARANG JADI AMBER/EMAS - Warna Tombol/Aksi */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            /* Saya gelapkan sedikit overlay-nya (0.6) agar tulisan putih lebih terbaca di atas background hijau */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1530866495561-507c9faab2ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .scroll-smooth { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans text-gray-700 scroll-smooth">
+
+    <nav class="fixed w-full z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-brand-blue">
+                        <i class="fas fa-water mr-2"></i>RAFTING<span class="text-brand-orange">MALANG</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="hover:text-brand-blue transition">Tentang Kami</a>
+                    <a href="#services" class="hover:text-brand-blue transition">Layanan</a>
+                    <a href="#products" class="hover:text-brand-blue transition">Paket</a>
+                    <a href="#gallery" class="hover:text-brand-blue transition">Galeri</a>
+                    <a href="#contact" class="hover:text-brand-blue transition">Kontak</a>
+                    <a href="https://wa.me/6281233952259" class="bg-brand-orange text-white px-5 py-2 rounded-full font-semibold hover:bg-opacity-90 transition shadow-lg animate-pulse">
+                        Booking WA
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMenu()" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4">
+            <a href="#about" class="block py-2 hover:text-brand-blue">Tentang Kami</a>
+            <a href="#services" class="block py-2 hover:text-brand-blue">Layanan</a>
+            <a href="#products" class="block py-2 hover:text-brand-blue">Paket</a>
+            <a href="#gallery" class="block py-2 hover:text-brand-blue">Galeri</a>
+            <a href="https://wa.me/6281233952259" class="block mt-4 text-center bg-brand-orange text-white py-2 rounded-lg">Booking Sekarang</a>
+        </div>
+    </nav>
+
+    <section class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-16">
+        <div class="max-w-4xl text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Pacu Adrenalin di <br> Sungai Terbaik Malang
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-200">
+                Pengalaman rafting aman, seru, dan tak terlupakan bersama tim profesional. Cocok untuk pemula hingga expert.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#products" class="bg-brand-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition shadow-lg">
+                    Lihat Paket Hemat
+                </a>
+                <a href="#video" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-blue transition">
+                    <i class="fas fa-play mr-2"></i> Tonton Video
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" alt="Tim Rafting" class="rounded-2xl shadow-xl">
+            </div>
+            <div>
+                <h3 class="text-brand-blue font-bold tracking-wide uppercase mb-2">Tentang Kami</h3>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Partner Petualangan Terpercaya Sejak 2015</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Kami adalah operator wisata arung jeram resmi di Malang yang mengutamakan <strong>Safety First</strong>. Kami memadukan keindahan alam sungai Malang dengan standar keamanan internasional.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-3"></i> Pemandu Bersertifikat Resmi</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-3"></i> Asuransi Lengkap untuk Peserta</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-brand-blue mr-3"></i> Peralatan Standar Internasional</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Layanan Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group border-b-4 border-transparent hover:border-brand-blue">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue transition">
+                        <i class="fas fa-ship text-2xl text-brand-blue group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Rafting Adventure</h3>
+                    <p class="text-gray-600 text-sm">Arung jeram menyusuri sungai grade 2-3 yang menantang namun aman.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group border-b-4 border-transparent hover:border-brand-orange">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange transition">
+                        <i class="fas fa-life-ring text-2xl text-brand-orange group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">River Tubing</h3>
+                    <p class="text-gray-600 text-sm">Sensasi hanyut santai menggunakan ban, cocok untuk santai.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group border-b-4 border-transparent hover:border-brand-blue">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue transition">
+                        <i class="fas fa-users text-2xl text-brand-blue group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Outbound</h3>
+                    <p class="text-gray-600 text-sm">Fun games dan team building untuk rombongan kantor atau sekolah.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group border-b-4 border-transparent hover:border-brand-orange">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gray-800 transition">
+                        <i class="fas fa-car text-2xl text-gray-800 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Jeep Offroad</h3>
+                    <p class="text-gray-600 text-sm">Jelajahi medan hutan pinus sebelum terjun ke sungai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Pilihan Paket Favorit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                
+                <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition bg-white relative">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Family Trip</h3>
+                    <p class="text-gray-500 text-sm mb-4">Cocok untuk pemula & anak-anak</p>
+                    <div class="text-3xl font-bold text-brand-blue mb-6">Rp 150.000<span class="text-sm text-gray-500 font-normal">/pax</span></div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Jarak 5 KM (±1.5 Jam)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Welcome Drink & Snack</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Peralatan Safety</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Guide & Rescue</li>
+                    </ul>
+                    <button onclick="openModal('Family Trip', '150.000')" class="w-full block text-center bg-brand-blue text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition shadow-md">
+                        Pilih Paket
+                    </button>
+                </div>
+
+                <div class="border-2 border-brand-orange rounded-2xl p-8 shadow-2xl relative bg-white transform md:-translate-y-6 z-10">
+                    <div class="absolute top-0 right-0 bg-brand-orange text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-lg uppercase tracking-wider">
+                        Best Seller
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Adventure Trip</h3>
+                    <p class="text-gray-500 text-sm mb-4">Paling diminati wisatawan</p>
+                    <div class="text-3xl font-bold text-brand-orange mb-6">Rp 175.000<span class="text-sm text-gray-500 font-normal">/pax</span></div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Jarak 10 KM (±2.5 Jam)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Makan Siang Prasmanan</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Dokumentasi Foto</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Shuttle Transport</li>
+                    </ul>
+                    <button onclick="openModal('Adventure Trip', '175.000')" class="w-full block text-center bg-brand-orange text-white py-4 rounded-lg font-bold hover:bg-opacity-90 transition shadow-lg text-lg">
+                        Booking Sekarang
+                    </button>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition bg-white relative">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Corporate Gathering</h3>
+                    <p class="text-gray-500 text-sm mb-4">Untuk perusahaan / grup besar</p>
+                    <div class="text-3xl font-bold text-gray-800 mb-6">Custom<span class="text-sm text-gray-500 font-normal"> Price</span></div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Rafting + Outbound</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Aula & Sound System</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> 2x Makan + Coffee Break</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand-blue mr-3 w-4"></i> Paintball (Opsional)</li>
+                    </ul>
+                    <button onclick="openModal('Corporate Gathering', 'Custom')" class="w-full block text-center border-2 border-gray-800 text-gray-800 py-3 rounded-lg font-bold hover:bg-gray-800 hover:text-white transition">
+                        Hubungi Kami
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="bookingModal" class="fixed inset-0 z-[100] hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md border-t-4 border-brand-orange">
+                <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold leading-6 text-gray-900" id="modalTitle">Booking Paket</h3>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4">
+                        Isi data singkat di bawah ini, kami akan langsung arahkan ke WhatsApp Admin.
+                    </p>
+                    <form id="bookingForm" onsubmit="submitToWA(event)">
+                        <input type="hidden" id="selectedPackage" name="package">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nama Pemesan</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue" id="name" type="text" placeholder="Contoh: Budi Santoso" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="date">Rencana Tanggal</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue" id="date" type="date" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="pax">Jumlah Orang</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue" id="pax" type="number" min="1" placeholder="Contoh: 10" required>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <button type="button" onclick="closeModal()" class="w-1/3 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition">
+                                Batal
+                            </button>
+                            <button type="submit" class="w-2/3 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center gap-2 shadow-lg transition">
+                                <i class="fab fa-whatsapp text-xl"></i> Kirim ke WA
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Keseruan di Sungai</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="rounded-lg shadow-md hover:scale-105 transition duration-300 w-full h-48 object-cover">
+                <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="rounded-lg shadow-md hover:scale-105 transition duration-300 w-full h-48 object-cover">
+                <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="rounded-lg shadow-md hover:scale-105 transition duration-300 w-full h-48 object-cover">
+                <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="rounded-lg shadow-md hover:scale-105 transition duration-300 w-full h-48 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Apa Kata Mereka?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl text-left border-l-4 border-brand-blue">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Gokil banget! Skipper-nya ramah dan kocak, bikin suasana cair. Makanannya juga enak sambalnya mantap."</p>
+                    <p class="font-bold">- Budi, Surabaya</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl text-left border-l-4 border-brand-blue">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Awalnya takut karena bawa anak kecil, tapi ternyata safety banget. Recommended buat liburan keluarga."</p>
+                    <p class="font-bold">- Siti, Jakarta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">FAQ (Tanya Jawab)</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer group">
+                    <summary class="font-semibold text-lg list-none flex justify-between items-center text-brand-blue">
+                        Apakah harus bisa berenang?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-gray-400"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4">Tidak harus. Anda akan dilengkapi pelampung (Life Jacket) berstandar tinggi dan dipandu instruktur profesional sepanjang pengarungan.</p>
+                </details>
+                <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer group">
+                    <summary class="font-semibold text-lg list-none flex justify-between items-center text-brand-blue">
+                        Apa saja yang harus dibawa?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-gray-400"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4">Bawa baju ganti, peralatan mandi, sunblock, dan sandal gunung atau sandal jepit yang tidak licin.</p>
+                </details>
+                <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer group">
+                    <summary class="font-semibold text-lg list-none flex justify-between items-center text-brand-blue">
+                        Lokasi meeting point dimana?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-gray-400"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4">Basecamp kami ada di Jl. Bareng Taman Bunga. Kami juga menyediakan penjemputan dari stasiun Malang (tambah biaya).</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brand-orange">
+        <div class="max-w-5xl mx-auto px-4 text-center text-white">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Slot Akhir Pekan Ini Terbatas!</h2>
+            <p class="text-xl mb-8">Amankan jadwal rafting Anda sekarang sebelum penuh. Dapatkan diskon khusus untuk rombongan di atas 10 orang.</p>
+            <a href="https://wa.me/6281233952259" class="bg-white text-brand-orange px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-lg">
+                Booking Sekarang
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Tips & Info Wisata</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1544377046-b15956059c4a?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">5 Tips Aman Rafting Bagi Pemula</h3>
+                        <p class="text-gray-600 text-sm mb-4">Jangan takut mencoba rafting meski belum pernah. Simak tips aman berikut ini...</p>
+                        <a href="#" class="text-brand-blue font-semibold text-sm hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1574950578143-858c6fc58922?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Kuliner Wajib Coba di Batu</h3>
+                        <p class="text-gray-600 text-sm mb-4">Lapar setelah main air? Ini rekomendasi makanan hangat di sekitar Batu...</p>
+                        <a href="#" class="text-brand-blue font-semibold text-sm hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1595231776515-ddc47692131d?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Beda Rafting Kasembon vs Batu</h3>
+                        <p class="text-gray-600 text-sm mb-4">Bingung pilih lokasi? Pahami karakter sungai masing-masing di sini...</p>
+                        <a href="#" class="text-brand-blue font-semibold text-sm hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-brand-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+                    <p class="text-gray-400 mb-8">Siap membantu rencana liburan Anda 24/7. Silakan hubungi kami atau datang langsung ke basecamp.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-brand-orange"></i>
+                            <span>Jl. Bareng Taman Bunga, Malang, Jawa Timur</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt mr-4 text-brand-orange"></i>
+                            <span>0812-3395-2259 (Dian)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-4 text-brand-orange"></i>
+                            <span>info@raftingmalang.com</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-orange transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-orange transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-orange transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden h-80 relative">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2139686862376!2d112.60688631477966!3d-7.976824994254885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788281bdd08839%3A0xc915f268bffa831f!2sAlun-Alun%20Kota%20Malang!5e0!3m2!1sid!2sid!4v1626145800000!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 mb-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© 2026 Rafting Malang Adventure. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openModal(packageName, price) {
+            const modal = document.getElementById('bookingModal');
+            const title = document.getElementById('modalTitle');
+            const packageInput = document.getElementById('selectedPackage');
+            
+            modal.classList.remove('hidden');
+            title.innerHTML = `Booking: <span class="text-brand-orange">${packageName}</span>`;
+            packageInput.value = packageName;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('hidden');
+        }
+
+        function submitToWA(event) {
+            event.preventDefault(); 
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const pax = document.getElementById('pax').value;
+            const packageName = document.getElementById('selectedPackage').value;
+            const phoneNumber = "6281233952259"; 
+            const text = `Halo Admin Rafting Malang, saya ingin booking:\n\n📦 Paket: *${packageName}*\n👤 Nama: ${name}\n📅 Tanggal: ${date}\n👥 Jumlah: ${pax} Orang\n\nMohon info ketersediaan slot. Terima kasih.`;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            closeModal();
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
